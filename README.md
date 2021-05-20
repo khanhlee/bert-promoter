@@ -1,7 +1,8 @@
-# Bert-Enhancer
-A transformer architecture based on BERT and 2D convolutional neural network to identify DNA enhancers from sequence information
+# Bert-Promoter
+An improved sequence-based predictor of DNA promoter using BERT pre-trained model and SHAP feature selection
 
-Recently, language representation models have drawn a lot of attention in the natural language processing field due to their remarkable results. Among them, bidirectional encoder representations from transformers (BERT) has proven to be a simple, yet powerful language model that achieved novel state-of-the-art performance. BERT adopted the concept of contextualized word embedding to capture the semantics and context of the words in which they appeared. In this study, we present a novel technique by incorporating BERT-based multilingual model in bioinformatics to represent the information of DNA sequences. We treated DNA sequences as natural sentences and then used BERT models to transform them into fixed-length numerical matrices. As a case study, we applied our method to DNA enhancer prediction, which is a well-known and challenging problem in this field. We then observed that our BERT-based features improved more than 5–10% in terms of sensitivity, specificity, accuracy and Matthews correlation coefficient compared to the current state-of-the-art features in bioinformatics. Moreover, advanced experiments show that deep learning (as represented by 2D convolutional neural networks; CNN) holds potential in learning BERT features better than other traditional machine learning techniques. In conclusion, we suggest that BERT and 2D CNNs could open a new avenue in biological modeling using sequence information.
+DNA promoters are crucial for precise regulation of gene expression, while their identification and strength prediction are challenging because of their free distribution and tremendous number of similar fractions in the genome. Although several bioinformatics tools have been developed, shortfalls in these models remain, and their performances need further improvement. Also, there has been no detailed investigation of transformer NLP model to improve this predictive performance. In the present study, a two-layer predictor was proposed based on BERT pre-trained model for identifying promoters (promoters or not) and their activities (strong and weak). More specifically, to build an efficient model, a pre-trained BERT model was employed to extract features from DNA sequences, and these features were assessed by SHAP analysis to look at the top-rank ones. Subsequently, the top features were inserted into different machine learning models to predict the outcomes. In the experiment, our final model achieved an accuracy of 85.5% and 76.9% for identifying promoters and their strength, respectively. The performance results also indicated that the proposed model outperformed state-of-the-art available toolkits.
+
 
 ![Image browser window](figures/flowchart.png)
 
@@ -24,8 +25,4 @@ Use "jsonl2csv.py" to transfrom JSON to CSV files:
 - *python jsonl2csv.py json_file csv_file*
 
 ### Step 4
-Use "2D_CNN.py" to train 2D CNN model from generated CSV files
-
-## Citation
-Please cite our paper as:
->Le NQK, Ho QT, Nguyen TTD, and Ou YY (2021) A Transformer Architecture Based on BERT and 2D Convolutional Neural Network to Identify DNA Enhancers from Sequence Information. *Briefings in Bioinformatics.* https://doi.org/10.1093/bib/bbab005.
+Use "xgb_training.py" to train XGB model from generated CSV files
