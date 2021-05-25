@@ -25,8 +25,5 @@ def extract_seq(file_path, dir_path='seq', seq_length=510):
     print(f"Number of sequences: {nseq}")
     print(f"Number of samples: {nsmp}")
 
-extract_seq('non.cv.txt', 'cv_neg')
-extract_seq('enhancer.cv.txt', 'cv_pos')
-
-extract_seq('non.ind.txt', 'ind_neg')
-extract_seq('enhancer.ind.txt', 'ind_pos')
+extract_seq('non_promoter.cv.txt', 'non_promoter')
+extract_seq('promoter.cv.txt', 'promoter')
