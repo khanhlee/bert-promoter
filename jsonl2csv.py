@@ -6,9 +6,6 @@ import sys
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 
-# input_file = 'C6KT68.jsonl'
-# output_file = 'C6KT68.csv'
-
 with open(input_file, 'r') as json_file:
     json_list = list(json_file)
 
