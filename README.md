@@ -1,8 +1,5 @@
 # Bert-Promoter
-An improved sequence-based predictor of DNA promoter using BERT pre-trained model and SHAP feature selection
-
-DNA promoters are crucial for precise regulation of gene expression, while their identification and strength prediction are challenging because of their free distribution and tremendous number of similar fractions in the genome. Although several bioinformatics tools have been developed, shortfalls in these models remain, and their performances need further improvement. Also, there has been no detailed investigation of transformer NLP model to improve this predictive performance. In the present study, a two-layer predictor was proposed based on BERT pre-trained model for identifying promoters (promoters or not) and their activities (strong and weak). More specifically, to build an efficient model, a pre-trained BERT model was employed to extract features from DNA sequences, and these features were assessed by SHAP analysis to look at the top-rank ones. Subsequently, the top features were inserted into different machine learning models to predict the outcomes. In the experiment, our final model achieved an accuracy of 85.5% and 76.9% for identifying promoters and their strength, respectively. The performance results also indicated that the proposed model outperformed state-of-the-art available toolkits.
-
+Predicting DNA promoters from highthroughput sequencing using BERT pretrained model
 
 ![Image browser window](figures/figure_1.tif)
 
